@@ -15,13 +15,13 @@ install("pip install pathlib")
 install("sudo apt-get install ffmpeg -y")
 
 # for change startup and updating video
-os.remove("/home/pi/boot_video.mov")
+os.remove("/home/pi/brand_pisignage_landscape.mp4")
 src_path = directory + "/brand_pisignage_landscape.mp4"
-dst_path = r"/home/pi/boot_video.mov"
+dst_path = r"/home/pi/brand_pisignage_landscape.mp4"
 shutil.copy(src_path, dst_path)
-os.remove("/home/pi/update_video.mov")
+os.remove("/home/pi/update_landscape.mp4")
 src_path = directory + "/update_landscape.mp4"
-dst_path = r"/home/pi/update_video.mov"
+dst_path = r"/home/pi/update_landscape.mp4"
 shutil.copy(src_path, dst_path)
 os.remove("/home/pi/update.png")
 src_path = directory + "/update.png"
@@ -29,17 +29,19 @@ dst_path = r"/home/pi/update.png"
 shutil.copy(src_path, dst_path)
 # for create js folder
 install("mkdir /home/pi/player2/public/app/js")
+install("mkdir /home/pi/player2/public/app/img")
 install("mkdir /home/pi/player2/public/app/thumbnails")
 install("sudo chmod 777 -R /home/pi/player2/public/app/thumbnails")
+install("sudo chmod 777 -R /home/pi/player2/public/app/img")
 
 # for change pisignage.min.js
 os.remove("/home/pi/player2/pisignage.js")
 src_path = directory + "/pisignage.js"
 dst_path = r"/home/pi/player2/pisignage.js"
 shutil.copy(src_path, dst_path)
-os.remove("/home/pi/player2/public/pisignage.min.js")
+os.remove("/home/pi/player2/public/app/pisignage.min.js")
 src_path = directory + "/pisignage.min.js"
-dst_path = r"/home/pi/player2/public/pisignage.min.js"
+dst_path = r"/home/pi/player2/public/app/pisignage.min.js"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/slick.js"
 dst_path = r"/home/pi/player2/public/app/js/slick.js"
@@ -59,25 +61,10 @@ shutil.copy(src_path, dst_path)
 src_path = directory + "/slick.css"
 dst_path = r"/home/pi/player2/public/app/css/slick.css"
 shutil.copy(src_path, dst_path)
-# for change index-pi.html
+# for change index-pi-piimage.html
 os.remove("/home/pi/player2/views/index-pi-piimage.html")
 src_path = directory + "/index-pi-piimage.html"
-dst_path = r"/home/pi/player2/app/views/index-pi.html"
-shutil.copy(src_path, dst_path)
-
-# for change logo image
-os.remove("/usr/share/plymouth/themes/pix/splash.png")
-src_path = directory + "/logo.png"
-dst_path = r"/usr/share/plymouth/themes/pix/splash.png"
-shutil.copy(src_path, dst_path)
-
-# for hide boot txt
-src_path = "/boot/cmdline.txt"
-dst_path = r"/boot/cmdline.txt.copy"
-shutil.copy(src_path, dst_path)
-os.remove("/boot/cmdline.txt")
-src_path = directory + "/cmdline.txt"
-dst_path = r"/boot/cmdline.txt"
+dst_path = r"/home/pi/player2/app/views/index-pi-piimage.html"
 shutil.copy(src_path, dst_path)
 
 os.remove("/home/pi/start.sh")
@@ -85,34 +72,34 @@ src_path = directory + "/start.sh"
 dst_path = r"/home/pi/start.sh"
 shutil.copy(src_path, dst_path)
 
-os.remove("/home/pi/player2/public/img/favicon.ico")
+os.remove("/home/pi/player2/public/app/img/favicon.ico")
 src_path = directory + "/favicon.png"
-dst_path = r"/home/pi/player2/public/img/favicon.ico"
+dst_path = r"/home/pi/player2/public/app/img/favicon.ico"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/VRlogo.png"
-dst_path = r"/home/pi/player2/public/img/VRlogo.png"
+dst_path = r"/home/pi/player2/public/app/img/VRlogo.png"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/main-banner.png"
-dst_path = r"/home/pi/player2/public/img/main-banner.png"
+dst_path = r"/home/pi/player2/public/app/img/main-banner.png"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/Background.png"
-dst_path = r"/home/pi/player2/public/img/Background.png"
+dst_path = r"/home/pi/player2/public/app/img/Background.png"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/modalbg.png"
-dst_path = r"/home/pi/player2/public/img/modalbg.png"
+dst_path = r"/home/pi/player2/public/app/img/modalbg.png"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/img-btn.png"
-dst_path = r"/home/pi/player2/public/img/img-btn.png"
+dst_path = r"/home/pi/player2/public/app/img/img-btn.png"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/home-banner.jpg"
-dst_path = r"/home/pi/player2/public/img/home-banner.jpg"
+dst_path = r"/home/pi/player2/public/app/img/home-banner.jpg"
 shutil.copy(src_path, dst_path)
 src_path = directory + "/18.png"
-dst_path = r"/home/pi/player2/public/img/18.png"
+dst_path = r"/home/pi/player2/public/app/img/18.png"
 shutil.copy(src_path, dst_path)
 # for welcome page video
 src_path = directory + "/vrquin.mp4"
-dst_path = r"/home/pi/player2/public/img/vrquin.mp4"
+dst_path = r"/home/pi/player2/public/app/img/vrquin.mp4"
 shutil.copy(src_path, dst_path)
 os.remove("/home/pi/player2/templates/welcome.ejs")
 src_path = directory + "/welcome.ejs"
@@ -260,8 +247,4 @@ pause()''')
 install("sudo cp -r c-img /home/pi/player2/public/app")
 install("sudo cp -r cat-img /home/pi/player2/public/app")
 install("sudo cp -r icons /home/pi/player2/public/app")
-# install("sudo rm -r /home/pi/15-feb-2023.zip")
-# os.chdir('/home/pi/captive-portal')
-# install("openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365")
-# install("cp ./sso_config.example.py ./sso_config.py")
 install("sudo reboot")
