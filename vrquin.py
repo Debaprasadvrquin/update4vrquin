@@ -72,7 +72,7 @@ src_path = directory + "/start.sh"
 dst_path = r"/home/pi/start.sh"
 shutil.copy(src_path, dst_path)
 
-os.remove("/home/pi/player2/public/app/img/favicon.ico")
+# os.remove("/home/pi/player2/public/app/img/favicon.ico")
 src_path = directory + "/favicon.png"
 dst_path = r"/home/pi/player2/public/app/img/favicon.ico"
 shutil.copy(src_path, dst_path)
@@ -101,10 +101,10 @@ shutil.copy(src_path, dst_path)
 src_path = directory + "/vrquin.mp4"
 dst_path = r"/home/pi/player2/public/app/img/vrquin.mp4"
 shutil.copy(src_path, dst_path)
-os.remove("/home/pi/player2/templates/welcome.ejs")
-src_path = directory + "/welcome.ejs"
-dst_path = r"/home/pi/player2/templates/welcome.ejs"
-shutil.copy(src_path, dst_path)
+# os.remove("/home/pi/player2/templates/welcome.ejs")
+# src_path = directory + "/welcome.ejs"
+# dst_path = r"/home/pi/player2/templates/welcome.ejs"
+# shutil.copy(src_path, dst_path)
 
 # for remove png,tmp & srt file in media folder
 with open('/home/pi/player2/remove.py', 'w') as f:
