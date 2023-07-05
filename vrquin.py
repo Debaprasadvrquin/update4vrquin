@@ -15,13 +15,13 @@ install("pip install pathlib")
 install("sudo apt-get install ffmpeg -y")
 
 # for change startup and updating video
-os.remove("/home/pi/brand_pisignage_landscape.mp4")
+os.remove("/home/pi/boot_video.mov")
 src_path = directory + "/brand_pisignage_landscape.mp4"
-dst_path = r"/home/pi/brand_pisignage_landscape.mp4"
+dst_path = r"/home/pi/boot_video.mov"
 shutil.copy(src_path, dst_path)
-os.remove("/home/pi/update_landscape.mp4")
+os.remove("/home/pi/update_video.mov")
 src_path = directory + "/update_landscape.mp4"
-dst_path = r"/home/pi/update_landscape.mp4"
+dst_path = r"/home/pi/update_video.mov"
 shutil.copy(src_path, dst_path)
 os.remove("/home/pi/update.png")
 src_path = directory + "/update.png"
@@ -64,7 +64,7 @@ shutil.copy(src_path, dst_path)
 # for change index-pi-piimage.html
 os.remove("/home/pi/player2/views/index-pi-piimage.html")
 src_path = directory + "/index-pi-piimage.html"
-dst_path = r"/home/pi/player2/app/views/index-pi-piimage.html"
+dst_path = r"/home/pi/player2/views/index-pi-piimage.html"
 shutil.copy(src_path, dst_path)
 
 os.remove("/home/pi/start.sh")
