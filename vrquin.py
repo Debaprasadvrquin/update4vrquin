@@ -33,8 +33,8 @@ shutil.copy(src_path, dst_path)
 install("mkdir /home/pi/player2/public/app/js")
 install("mkdir /home/pi/player2/public/app/img")
 install("mkdir /home/pi/player2/public/app/thumbnails")
-#install("sudo chmod 777 -R /home/pi/player2/public/app/thumbnails")
-#install("sudo chmod 777 -R /home/pi/player2/public/app/img")
+install("sudo chmod 777 -R /home/pi/player2/public/app/thumbnails")
+install("sudo chmod 777 -R /home/pi/player2/public/app/img")
 
 # for change pisignage.min.js
 os.remove("/home/pi/player2/pisignage.js")
