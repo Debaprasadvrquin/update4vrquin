@@ -10,7 +10,7 @@ os.chdir('/home/pi/update4vrquin')
 directory = os.getcwd()
 
 # for install pathlib in pip
-install("sudo chmod 777 -R /home/pi/player2")
+#install("sudo chmod 777 -R /home/pi/player2")
 install("pip install pathlib")
 install("sudo apt-get install ffmpeg -y")
 
